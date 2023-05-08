@@ -1,0 +1,231 @@
+@charset "utf-8"
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background-color: #fff;
+    color: #222328;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+.header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo a {
+    display: block;
+    width: 200px;
+    height: 40px;
+    text-indent: -9999px;
+    background-image: url('../images/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gnb{
+    display: flex;
+    align-items: center;
+}
+
+.gnb > li {
+    position: relative;
+}
+
+.gnb > li > a {
+    display: block;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 50px;
+    position: relative;
+}
+.gnb > li > a:hover {
+    color: tomato;
+}
+
+.gnb > li > a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: tomato;
+}
+
+.gnb ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 8px 0;
+}
+
+.gnb ul li a {
+    display: block;
+    padding: 10px 0;
+}
+
+.gnb ul li a:hover {
+    background-color: tomato;
+    color: #fff;
+}
+
+/* slide */
+.slide {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide .items {
+    position: absolute;
+    top: -300px;
+    left: 0;
+    width: 100%;
+}
+
+.slide img {
+    display: block;
+}
+
+/* contents */
+.contents {
+    display: flex;
+    height: 200px;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.contents .tab{
+    flex: 1;
+}
+
+.tab .tab_title {
+    display: flex;
+    gap: 5px;
+    position: relative;
+}
+
+.tab .tab_title::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: tomato;
+}
+
+.tab .tab_title a {
+    background-color: #eee;
+    display: block;
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    line-height: 50px;
+}
+
+.tab .tab_title .notice {
+    background-color: tomato;
+    color: #fff;
+}
+
+.tab_contents {
+    position: relative;
+    height: 130px;
+}
+
+.tab_contents ul {
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.tab_contents .notice li a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+}
+
+.tab_contents .gallery {
+    background-color: red;
+}
+
+.contents .banner{
+    flex: 1;
+}
+
+.banner img {
+    display: block; 
+    height: 100%;
+    width: 100%;   
+}
+
+.contents .icons{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+
+.icons a {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.icons a:hover {
+    color: tomato;
+}
+
+/* footer */
+
+.footer{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 0 30px;
+}
+
+.footer .sns a {
+    padding: 0 10px;
+}
+
+.footer .sns a:hover {
+    color: tomato;
+}
